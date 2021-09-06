@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  NHS.UK prototype kit - Gitpod installation guide
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/docs",
+        text: "Home"
+      }
+    ],
+    href: "/docs/install",
+    text: "Install"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        <span class="nhsuk-caption-l">Step 3 of 6</span>
+        Open Gitpod in your new repository
+      </h1>
+
+      <p>Go to your new repository and open Gitpod by prefixing the URL with:</p>
+      <pre class="app-pre"><code class="app-code">gitpod.io/#</code></pre>
+      <p>For example:</p>
+      <pre class="app-pre"><code class="app-code">gitpod.io/#https://github.com/nhsuk/service-manual-gitpod</code></pre>
+
+      <p>Alternatively, you can <a href ="https://www.gitpod.io/docs/browser-extension">install a Gitpod browser extension if you use Chrome or Firefox</a></p>
+
+
+      {{ pagination({
+        "previousUrl": "install-gitpod-step",
+        "previousPage": "Install Gitpod",
+        "nextUrl": "install-kit",
+        "nextPage": "Install the kit"
+      }) }}
+
+
+    </div>
+
+  </div>
+{% endblock %}
