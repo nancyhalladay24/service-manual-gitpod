@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  NHS.UK prototype kit - Gitpod installation guide
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/docs",
+        text: "Home"
+      }
+    ],
+    href: "/docs/install",
+    text: "Install"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Install Gitpod to a Github workspace or organisation
+      </h1>
+
+      <p>Use this <a href="https://github.com/apps/gitpod-io/installations/new" data-link="download">Gitpod installer</a> to add the Gitpod app to your Github workspace or organisation.</p>
+
+      <p>You will need to:</p>
+      <ol>
+        <li>Open the <a href="https://github.com/apps/gitpod-io/installations/new" data-link="download">Gitpod installer</a>. You may be asked to sign in to your Github account.</li>
+        <li>Select the workspace or organisation you want to add Gitpod to</li>
+        <li>Choose to install Gitpod to a select repository or to all your repositories. Then click 'install'. You may be asked to enter your Github password.</li>
+        <li>Sign in to your Github account on Gitpod. To continue you will need to authorise Gitpod to access your account.</li>
+        <li>Click 'Install app' to install the Github app for Gitpod. To complete installation you will need to authorise Gitpods additional permissions to access your repositories.</li>
+      </ol>
+
+      <p>To start your Gitpod environment from a Github repository <a href ="https://www.gitpod.io/docs/getting-started">follow this guidance on Gitpod.io</a></p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            My workspace or organisation already has Gitpod installed
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>If your workspace or organisation already has Gitpod installed you can follow our guidance on how to <a href="#">configure a Github repository to Gitpod</a></p>
+        </div>
+      </details>
+      {{ backLink({
+        "href": "/docs/install",
+        "text": "Back to Installing the kit",
+        "classes": "nhsuk-u-margin-top-6"
+      }) }}
+
+
+    </div>
+
+  </div>
+{% endblock %}

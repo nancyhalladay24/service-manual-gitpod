@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  How to setup Git - NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "how-tos/includes/breadcrumb.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Setting up the kit in the browser
+      </h1>
+
+      <p>If you can't install the kit or prefer not to use the kit locally on your computer, you can set up the kit in your browser instead.</p>
+
+      <p>To set up the prototype kit in your browser you will need to use Gitpod. Gitpod creates automated workspaces and dev environments in your browser from a repository on Github.</p>
+
+      <p>You can <a href="https://www.gitpod.io/docs">read more about using Gitpod on their website</a>.</p>
+
+
+      <h2 id="install-git">1. Create a new repository on your Github account</h2>
+
+      <p>The first thing you need to do is <a href="https://git-scm.com/downloads" target="_blank">create a new repository on your Github account</a>.</p>
+
+      <h2 id="git-user-password">2. Import the NHS.UK prototype kit repository</h2>
+
+      <p>Copy this URL:</p>
+      <pre class="app-pre"><code class="app-code">https://github.com/nhsuk/nhsuk-prototype-kit.git</code></pre>
+
+
+      <h2 id="instialise-git">3. Install Gitpod to your workspace or organisation</h2>
+
+      <p>If your workspace or organisation already has Gitpod installed you will need to <a href="#">configure your Github repository to Gitpod instead</a></p>
+
+
+      <h2 id="first-git-commit">5. Finish installing the kit in the terminal</h2>
+        <p>Enter in terminal:</p>
+
+      <h2 id="check-git-status-again">6. Run the kit</h2>
+
+      <p>Start your local server by entering in the terminal:</p>
+
+      <h2 id="learning-git">7. Check it works</h2>
+
+      <p>You can learn more about Gitpod at:</p>
+
+      <ul>
+        <li><a href="https://try.github.io/levels/1/challenges/1">GitHub tutorial on git</a></li>
+        <li><a href="http://think-like-a-git.net/">Advanced git tutorial</a></li>
+      </ul>
+
+      {% include "how-tos/includes/back-button.html" %}
+
+    </div>
+
+  </div>
+{% endblock %}
