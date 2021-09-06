@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  How to setup Git - NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "how-tos/includes/breadcrumb.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Setting up the kit in the browser
+      </h1>
+
+      <p>If you can't install the kit or prefer not to use the kit locally on your computer, you can set up the kit in your browser instead.</p>
+
+      <p>To set up the prototype kit in your browser you will need to use Gitpod. Gitpod creates automated workspaces and dev environments in your browser from a repository on Github.</p>
+
+      <p>You can <a href="https://www.gitpod.io/docs">read more about using Gitpod on their website</a>.</p>
+
+
+      <h2 id="install-git">1. Import the NHS.UK prototype kit repository to your Github account</h2>
+
+      <p>Go to <a href="https://github.com/new/import" target="_blank">'Import your project to GitHub' on your Github account</a>.</p>
+      <p>And copy this URL in to the text field labelled 'your old repositories Clone URL':</p>
+      <pre class="app-pre"><code class="app-code">https://github.com/nhsuk/nhsuk-prototype-kit.git</code></pre>
+      <p>Then, name your repository and start the import by clicking the green button labelled 'begin import'.</p>
+      <p>Once the import is complete you will recieve an email from Github.</p>
+
+      <h2 id="instialise-git">2. Install Gitpod to your workspace or organisation</h2>
+
+      <p>Use this <a href="https://github.com/apps/gitpod-io/installations/new" data-link="download">Gitpod installer</a> to add the Gitpod app to your Github workspace or organisation.</p>
+
+      <p>You will need to:</p>
+      <ol>
+        <li>Open the <a href="https://github.com/apps/gitpod-io/installations/new" data-link="download">Gitpod installer</a>. You may be asked to sign in to your Github account.</li>
+        <li>Select the workspace or organisation you want to add Gitpod to</li>
+        <li>Choose to install Gitpod to a select repository or to all your repositories. Then click 'install'. You may be asked to enter your Github password.</li>
+        <li>Sign in to your Github account on Gitpod. To continue you will need to authorise Gitpod to access your account.</li>
+        <li>Click 'Install app' to install the Github app for Gitpod. To complete installation you will need to authorise Gitpods additional permissions to access your repositories.</li>
+      </ol>
+
+      <p>If your workspace or organisation already has Gitpod installed you will need to <a href="/docs/install/configure-gitpod">configure your Github repository to Gitpod instead</a></p>
+
+
+      <h2 id="first-git-commit">3. Open Gitpod in your new repository</h2>
+      <p>Go to your new repository and open Gitpod by prefixing the URL with:</p>
+      <pre class="app-pre"><code class="app-code">gitpod.io/#</code></pre>
+      <p>For example:</p>
+      <pre class="app-pre"><code class="app-code">gitpod.io/#https://github.com/nhsuk/service-manual-gitpod</code></pre>
+
+      <p>Alternatively, you can <a href ="https://www.gitpod.io/docs/browser-extension">install a Gitpod browser extension if you use Chrome or Firefox</a></p>
+
+        <h2 id="first-git-commit">4. Install the kit in Gitpod</h2>
+        <p>To install the kit, enter in the Gitpod terminal:</p>
+        <pre class="app-pre"><code class="app-code">npm install</code></pre>
+        <p>While installing it may <code class="app-code">WARN</code> about some items - this is ok. As long as there are no <code class="app-code">ERRORs</code> you can continue.</p>
+
+
+      <h2 id="check-git-status-again">5. Run the kit</h2>
+
+      <p>Start your local server by entering in the terminal:</p>
+      <pre class="app-pre"><code class="app-code">npm run watch</code></pre>
+      <p>After the kit has started, you should see a message telling you that the kit is running:</p>
+
+
+      <h2 id="learning-git">6. Check it works</h2>
+      <p>In your web browser, visit <a href="http://localhost:3000" target="_blank">http://localhost:3000 <span class="nhsuk-u-visually-hidden">opens in a new tab</span></a></p>
+
+      <p>You should see the prototype welcome page.</p>
+
+      <img class="app-img-guide nhsuk-u-margin-bottom-0" alt="Screenshot of the prototype kit welcome page" src="/images/prototype-kit-landing-page.png" />
+
+      <h2>Installation complete</h2>
+
+      <p>The kit is now installed. Congratulations!</p>
+
+      <h2>Getting going</h2>
+
+      <p><a href="/docs/how-tos/making-pages">Start making pages</a></p>
+
+      {% include "how-tos/includes/back-button.html" %}
+
+    </div>
+
+  </div>
+{% endblock %}

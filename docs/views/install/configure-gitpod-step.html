@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  NHS.UK prototype kit - Gitpod installation guide
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/docs",
+        text: "Home"
+      }
+    ],
+    href: "/docs/install",
+    text: "Install"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        <span class="nhsuk-caption-l">Step 2 of 6</span>
+        Configure your Github repository to Gitpod
+      </h1>
+
+      <p>If your organisation or workspace already has Gitpod installed you can <a href="https://github.com/apps/gitpod-io/installations/new" data-link="download">configure Gitpod’s repository access through the Gitpod installer</a>.</p>
+
+      <p>You will need to:</p>
+      <ol>
+        <li>Open the <a href="https://github.com/apps/gitpod-io/installations/new" data-link="download">Gitpod installer</a>. You may be asked to sign in to your Github account.</li>
+        <li>Click 'configure' on the organisation or workspace panel link</li>
+        <li>In the repository access section, select the repository that you want to allow Gitpod to access</li>
+        <li>Click 'update access' or 'save'</li>
+      </ol>
+
+      <p>If you're not an admin on the repository you want to use Gitpod on you will need to request the configuration. An admin can approve this in the project under the  applications section.</p>
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            I don't have the option to configure a repository
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>You need Gitpod installed on a Github workspace or organisation before you can configure a repository. Follow our guidance on how to <a href="install-gitpod-step">install Gitpod to a Github organisation or workspace</a></p>
+        </div>
+      </details>
+
+      {{ pagination({
+        "previousUrl": "import",
+        "previousPage": "Import the kit",
+        "nextUrl": "open-gitpod",
+        "nextPage": "Open Gitpod"
+      }) }}
+
+
+    </div>
+
+  </div>
+{% endblock %}

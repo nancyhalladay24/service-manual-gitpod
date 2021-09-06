@@ -1,10 +1,28 @@
 {% extends 'layout.html' %}
 
+
 {% block beforeContent %}
-  {{ hero({
-    "heading": "NHS.UK prototype kit",
-    "text": "Rapidly create HTML prototypes of NHS.UK services."
-  }) }}
+
+  <section class="nhsuk-hero">
+     <div class="nhsuk-width-container nhsuk-hero--border app-width-container">
+       <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-two-thirds">
+           <div class="nhsuk-hero__wrapper app-hero__wrapper">
+             <h1 class="nhsuk-u-margin-bottom-4">NHS.UK prototype kit</h1>
+             <p class="nhsuk-body-l nhsuk-u-margin-bottom-1">Rapidly create HTML prototypes of NHS.UK services.</p>
+           </div>
+         </div>
+         <div class="nhsuk-grid-column-one-third app-latest-update">
+           <div class="nhsuk-card app-card--transparent nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-0">
+             <div class="nhsuk-card__content">
+               <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="/whats-new">What's new</a></h2>
+               <p class="nhsuk-card__description">You can now <a href="how-tos/browser-setup-start">set up the prototype kit in your browser</a></p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
 {% endblock %}
 
 {% block content %}

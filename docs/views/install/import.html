@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Import - NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/docs",
+        text: "Home"
+      }
+    ],
+    href: "/docs/install",
+    text: "Install"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        <span class="nhsuk-caption-l">Step 1 of 6</span>
+        Import the NHS.UK prototype kit repository to your Github account
+      </h1>
+
+      <p>Go to <a href="https://github.com/new/import" target="_blank">'Import your project to GitHub' on your Github account</a> and copy this URL in to the text field labelled 'your old repositories clone URL':</p>
+      <pre class="app-pre"><code class="app-code">https://github.com/nhsuk/nhsuk-prototype-kit.git</code></pre>
+      <p>Then, name your repository and start the import by clicking the green button labelled 'begin import'.</p>
+      <p>Once the import is complete you will recieve an email from Github.</p>
+
+      {% from 'pagination/macro.njk' import pagination %}
+
+      {{ pagination({
+        "nextUrl": "install-gitpod-step",
+        "nextPage": "Install Gitpod"
+      }) }}
+
+    </div>
+
+  </div>
+{% endblock %}
