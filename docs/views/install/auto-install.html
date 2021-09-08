@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  NHS.UK prototype kit - Gitpod installation guide
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/docs",
+        text: "Home"
+      }
+    ],
+    href: "/docs/install",
+    text: "Install"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        <span class="nhsuk-caption-l">Step 4 of 5</span>
+        Install and run the kit in Gitpod
+      </h1>
+      <p>Once Gitpod has finished loading, the prototype kit should install and run the kit automatically.</p>
+      <p>You will know this is complete when the interface shows the simple browser on the right hand side and the terminal is displaying port links, like this:</p>
+      <img class="app-img-guide nhsuk-u-margin-bottom-0" style="box-shadow: 0px 20px 20px 1px #A9A9A9;)" alt="Screenshot of checking Node version" src="/images/gitpod/gitpod-interface.png" />
+      <br><br><br>
+      <p>If your kit didn't install automatically you can <a href="https://www.gitpod.io/docs/getting-started">follow this guidance on Gitpod's website about starting your workspace</a>.</p>
+
+
+      {{ pagination({
+        "previousUrl": "open-gitpod",
+        "previousPage": "Open Gitpod",
+        "nextUrl": "check-kit",
+        "nextPage": "Check it works"
+      }) }}
+
+
+    </div>
+
+  </div>
+{% endblock %}

@@ -49,6 +49,15 @@
 
         {% endcall %}
 
+        {% from 'details/macro.njk' import details %}
+
+{{ details({
+  "text": "What do you mean by install software?",
+  "HTML": "
+  <p>Can you install software like Microsoft Word or Photoshop to your computer without having to get approval from an administrator.</p>
+  "
+}) }}
+
         {{ button({
           "text": "Continue"
         }) }}
