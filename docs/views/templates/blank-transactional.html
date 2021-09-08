@@ -9,11 +9,10 @@
 {% block beforeContent %}
 {% endblock %}
 
-{% block outerContent %}
-  {{ backLink({
-    "href": "/templates/start-page",
-    "text": "Back",
-    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/docs",
+    text: "Home"
   }) }}
 {% endblock %}
 
@@ -24,7 +23,7 @@
 
       <!-- Add your content here -->
 
-    </div>  
+    </div>
 
   </div>
 {% endblock %}
